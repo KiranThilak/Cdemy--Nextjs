@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter, Manrope } from 'next/font/google'
 import { cx } from "@/src/utils";
 import Header from '@/src/components/Header';
+import Footer from '../components/Footer';
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -29,7 +30,10 @@ export default function RootLayout({ children }) {
           "font-mr bg-gradient-to-r from-green-100 to-blue-100 "
         )}
       >
-       <Header/> {children}</body>
+       <Header/>
+       {children}
+       <Footer/>
+       </body>
     </html>
   )
 }
